@@ -20,34 +20,35 @@ public interface MessageService {
 	 * 
 	 * @Title: addMessage
 	 * @Description: 添加一个消息
-	 * @param @param message 设定文件
+	 * @param @param messageModel 设定文件
 	 * @return void 返回类型
 	 * @throws
 	 */
-	public abstract void addMessage(MessageModel message);
+	public abstract void addMessage(MessageModel messageModel);
 
 	/**
 	 * 
 	 * @Title: queryMessages
 	 * @Description: 根据查询条件, 查询消息
-	 * @param @param query
+	 * @param @param messageQuery
 	 * @param @return 设定文件
 	 * @return PageList<MessageModel> 返回类型
 	 * @throws
 	 */
-	public abstract PageList<MessageModel> queryMessages(MessageQuery query);
+	public abstract PageList<MessageModel> queryMessages(
+			MessageQuery messageQuery);
 
 	/**
 	 * 
 	 * @Title: queryMessagesByDestination
 	 * @Description: 根据查询条件, 查询消息，其中destionation是必要条件
-	 * @param @param query
+	 * @param @param messageQuery
 	 * @param @return 设定文件
 	 * @return PageList<MessageModel> 返回类型
 	 * @throws
 	 */
 	public abstract PageList<MessageModel> queryMessagesByDestination(
-			MessageQuery query);
+			MessageQuery messageQuery);
 
 	/**
 	 * 
@@ -77,7 +78,7 @@ public interface MessageService {
 	/**
 	 * 
 	 * @Title: updateMessage
-	 * @Description: 修改一个消息
+	 * @Description: 更新消息
 	 * @param @param messageModel 设定文件
 	 * @return void 返回类型
 	 * @throws

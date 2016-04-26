@@ -4,16 +4,23 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * Title: PageList Description: 公共基础分页
+ * 
+ * @author ssc
+ * @date 2016年4月26日 下午12:39:15
+ */
 public class PageList<T> implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID     = 1L;
 
 	public static final int DEFAULT_ITEMS_PER_PAGE = 20;
 
-	private int page; // current page number, 1-based
-	private int items; // total items number
-	private int itemsPerPage; // items number per page
-	private List<T> data; // list data
+	private int page; 													// current page number, 1-based
+	private int items; 													// total items number
+	private int itemsPerPage; 											// items number per page
+	private List<T> data; 												// list data
 
 	public PageList(int items) {
 		this(DEFAULT_ITEMS_PER_PAGE, items);

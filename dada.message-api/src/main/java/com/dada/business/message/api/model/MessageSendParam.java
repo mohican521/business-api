@@ -41,6 +41,7 @@ public class MessageSendParam implements Serializable {
 	private String track; 											// 消息追踪轨迹[唯一]
 	private String origin; 											// 消息发送方
 	private String destination; 									// 消息接收方
+	private String[] targets; 										// 消息详细接收方[营销短信拉新专用]
 	private Date validDate; 										// 消息生效时间
 	private Date invalidDate; 										// 消息失效时间
 	private String application; 									// 对应应用
@@ -60,9 +61,8 @@ public class MessageSendParam implements Serializable {
 	}
 
 	public void setMode(Integer mode) {
-		if (!contains(MODES, mode)) {
+		if (!contains(MODES, mode))
 			throw new IllegalArgumentException("mode is invalid.");
-		}
 	}
 
 	public Integer getChannel() {
@@ -70,9 +70,8 @@ public class MessageSendParam implements Serializable {
 	}
 
 	public void setChannel(Integer channel) {
-		if (!contains(CHANNELS, channel)) {
+		if (!contains(CHANNELS, channel))
 			throw new IllegalArgumentException("channel is invalid.");
-		}
 		this.channel = channel;
 	}
 
@@ -81,9 +80,8 @@ public class MessageSendParam implements Serializable {
 	}
 
 	public void setType(Integer type) {
-		if (!contains(TYPES, type)) {
+		if (!contains(TYPES, type))
 			throw new IllegalArgumentException("type is invalid.");
-		}
 		this.type = type;
 	}
 
@@ -109,6 +107,14 @@ public class MessageSendParam implements Serializable {
 
 	public void setDestination(String destination) {
 		this.destination = destination;
+	}
+
+	public String[] getTargets() {
+		return targets;
+	}
+
+	public void setTargets(String[] targets) {
+		this.targets = targets;
 	}
 
 	public Date getValidDate() {
