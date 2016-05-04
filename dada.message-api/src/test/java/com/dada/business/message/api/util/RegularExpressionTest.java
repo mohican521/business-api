@@ -14,13 +14,13 @@ import org.junit.Test;
  */
 public class RegularExpressionTest {
 
-	private static final String REGEX_DESTINATION = "^type:(user|mobile):[a-zA-Z_0-9]+$";
+	private static final String REGEX_DESTINATION = "^type:(user|mobile):[a-zA-Z_0-9*]+$";
 	private static Pattern PATTERN_DESTINATION = Pattern
 			.compile(REGEX_DESTINATION);
 
 	@Test
 	public void test() {
-		String destination = "type:mobile1:18611466872";
+		String destination = "type:mobile:*";
 
 		// find方法是部分匹配
 		if (!PATTERN_DESTINATION.matcher(destination).find())
