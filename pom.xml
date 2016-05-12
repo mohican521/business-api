@@ -12,6 +12,7 @@
 	<modules>
 		<module>dada.message-api</module>
 		<module>dada.common-api</module>
+		<module>dada.user-api</module>
 	</modules>
 
 	<properties>
