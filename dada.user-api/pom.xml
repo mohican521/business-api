@@ -20,7 +20,11 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dada.bussiness-api</groupId>
+			<artifactId>dada.common-api</artifactId>
 		</dependency>
 	</dependencies>
 </project>
